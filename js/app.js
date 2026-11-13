@@ -10,29 +10,31 @@ window.addEventListener('scroll', () => {
     }
 })
 
-const menu = document.querySelectorAll('.menu li')
-const contents = document.querySelectorAll('.contents')
-init(0)
-function init(num) {
-    menu[num].classList.add('active')
-    contents[num].classList.add('on')
+// 별 보기 가이드 탭
+const tabs = document.querySelectorAll("#guides .menu li");
+const cards = document.querySelectorAll("#guides .contents li");
+
+showGuide(0)
+function showGuide(index) {
+    // 1. 전부 on 빼기
+    tabs.forEach((tab) => tab.classList.remove("on"));
+    cards.forEach((card) => card.classList.remove("on"));
+    // 2. 선택한 번호에만 on 붙이기
+    tabs[index].classList.add("on");
+    cards[index].classList.add("on");
 }
-function reset() {
-    for (let i = 0; i < menu.length; i++) {
 
-        menu[i].classList.remove('active')
-        contents[i].classList.remove('on')
-    }
-}
-menu.forEach(function (tab, i) {
-    tab.addEventListener('click', function () {
-        console.log(i)
-        reset()
-        init(i)
-    })
-})
+tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => showGuide(index));
+});
+cards.forEach((card, index) => {
+    card.addEventListener("click", () => showGuide(index));
+});
 
 
+
+const mNavBtn = document.querySelector('.mob-nav-btn')
+const navBtns = document.querySelectorAll('nav ul li a')
 
 
 body.classList.add('m-nav-open')
@@ -42,7 +44,7 @@ topBtn.addEventListener('click', () => {
         behavior: 'smooth'
     })
 })
-const mNavBtn = document.querySelector('.mob-nav-btn')
+
 navBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault()
@@ -54,10 +56,10 @@ navBtns.forEach(btn => {
             top: target.offsetTop,
             behavior: 'smooth'
         })
-        body.classList.toggle('m=nav-open')
+        body.classList.toggle('m-nav-open')
     })
 })
 mNavBtn.addEventListener('click', (e) => {
     e.preventDefault()
-    body.classList.toggle('m=nav-open')
+    body.classList.toggle('m-nav-open')
 })
