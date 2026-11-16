@@ -47,11 +47,9 @@ topBtn.addEventListener('click', () => {
 
 navBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        e.preventDefault()
-
         const id = btn.getAttridute('Href')
         const target = document.querySelector('id')
-        const headerH=document.querySelector('header').offsetHeight
+        const headerH = document.querySelector('header').offsetHeight
         window.scrollTo({
             top: target.offsetTop,
             behavior: 'smooth'
@@ -63,3 +61,14 @@ mNavBtn.addEventListener('click', (e) => {
     e.preventDefault()
     body.classList.toggle('m-nav-open')
 })
+
+const swiper = new Swiper('.mySwiper', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },    
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    loop:true
+});
