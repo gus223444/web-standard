@@ -33,11 +33,16 @@ h3 {
     font-family: "Do Hyeon", sans-serif;
     font-weight: normal;
 }
-
+.hero .sub {
+    color:#eee
+}
 .logo {
     font-size: 2.8rem;
+    color: #fff;
 }
-
+main section {
+    padding:50px 0
+}
 .inner,
 main {
     max-width: 1200px;
@@ -64,10 +69,11 @@ header .inner {
 nav ul {
     display: flex;
     gap: 2.8rem;
+    color: #000;
 }
 
-nav a:hover {
-    color: orange;
+nav a {
+    color: rgb(235, 235, 235);
 }
 
 .hero {
@@ -179,7 +185,12 @@ nav a:hover {
 .post:nth-last-of-type(even) {
     flex-direction: row-reverse;
 }
-
+.thumb{
+    overflow: hidden;
+    flex: 1;
+    height: 30rem;
+    position: relative;
+}
 .thumb .bg {
     background-repeat: no-repeat;
     background-size: cover;
@@ -187,9 +198,11 @@ nav a:hover {
     z-index: 0;
     transition: .3s;
     transform: scale(1);
-    position: relative;
-    width: 25rem;
-    height: 15rem;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
 }
 
 .post:nth-of-type(1) .thumb .bg {
@@ -210,7 +223,7 @@ nav a:hover {
 
 
 .thumb .date {
-    position: relative;
+    position: absolute;
     z-index: 5;
     padding: 0.4rem 1rem;
     border-radius: 2rem;
@@ -249,7 +262,7 @@ nav a:hover {
 .photos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 10rem 10rem;
+    grid-template-rows: 15rem 15rem;
     gap: 1rem;
     grid-template-areas: "p1 p1 p2 p3" "p4 p5 p5 p3";
 }
@@ -323,6 +336,9 @@ body.scroll header {
 body.scroll .logo {
     color: #fff
 }
+body.scroll nav ul{
+    color:#fff
+}
 
 h1 {
     color: #D7762F;
@@ -376,23 +392,23 @@ h2 {
     font-size: 14px;
 }
 
+.sub{
+    color:#707070
+}
 .menu {
     background-color: #fff;
     display: flex;
     flex: 1;
     gap: 10px;
     border-radius: 50px;
-    padding: 5px 0 0 5px;
+    padding: 10px;
     margin-top: 10px;
-    height: 58px;
     font-size: 16px;
     color: #783606;
     max-width: 600px;
 }
 
-ul {
-    list-style: none;
-}
+
 
 .menu li {
     text-align: center;
@@ -401,12 +417,13 @@ ul {
     border-radius: 24px;
     cursor: pointer;
     transition: .3s;
-    margin: 5px;
     flex: 1;
+    padding:10px
 }
 
 .menu li.on {
     background-color: #AC7F5E;
+    color:#fff
 }
 
 .contents li.on .tag {
@@ -425,7 +442,10 @@ ul {
 .contents li.on span {
     opacity: 1;
 }
+.contents li.on  .sub{
+    color:#fff
 
+}
 .contents li span {
     font-size: 56px;
     opacity: 0;
@@ -492,14 +512,7 @@ ul {
     background-image: url(../img/left.png);
 }
 
-.swiper-slide.s01 .inner {
-    justify-content: center;
-}
-
-.swiper-slide.s02 .inner {
-    justify-content: center;
-}
-
-.swiper-slide.s03 .inner {
+.hero .inner {
+    text-align: center;
     justify-content: center;
 }

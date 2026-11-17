@@ -1,6 +1,5 @@
 const body = document.querySelector('body')
 const topBtn = document.querySelector('.top')
-body.classList.add('scroll')
 window.addEventListener('scroll', () => {
     console.log(window.scrollY)
     if (window.scrollY > 100) {
@@ -37,7 +36,6 @@ const mNavBtn = document.querySelector('.mob-nav-btn')
 const navBtns = document.querySelectorAll('nav ul li a')
 
 
-body.classList.add('m-nav-open')
 topBtn.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
