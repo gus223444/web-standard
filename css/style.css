@@ -206,15 +206,15 @@ nav a {
 }
 
 .post:nth-of-type(1) .thumb .bg {
-    background-image: url(../img/bgt.jpg);
+    background-image: url(../img/123123.jpg);
 }
 
 .post:nth-of-type(2) .thumb .bg {
-    background-image: url(../img/mp.jpg);
+    background-image: url(../img/333.jpg);
 }
 
 .post:nth-of-type(3) .thumb .bg {
-    background-image: url(../img/mnb.jpg);
+    background-image: url(../img/123123123.jpg);
 }
 
 .post:hover .thumb .bg {
@@ -269,27 +269,27 @@ nav a {
 
 .p1 {
     grid-area: p1;
-    background: url(../img/szbgt.jpg) no-repeat left/cover
+    background: url(../img/111.jpg) no-repeat left/cover
 }
 
 .p2 {
     grid-area: p2;
-    background: url(../img/bgt.jpg) no-repeat left/cover
+    background: url(../img/123123.jpg) no-repeat left/cover
 }
 
 .p3 {
     grid-area: p3;
-    background: url(../img/szmp.jpg) no-repeat left/cover
+    background: url(../img/222.jpg) no-repeat left/cover
 }
 
 .p4 {
     grid-area: p4;
-    background: url(../img/szm.jpg) no-repeat left/cover
+    background: url(../img/45.jpg) no-repeat left/cover
 }
 
 .p5 {
     grid-area: p5;
-    background: url(../img/B.jpg) no-repeat left/cover
+    background: url(../img/159.jpg) no-repeat left/cover
 }
 
 .photos li {
