@@ -1,13 +1,4 @@
 @media screen and (max-width:1024px) {
-    .post {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .post:nth-last-of-type(even) {
-        flex-direction: column;
-    }
-
     .profile {
         flex-direction: column;
     }
@@ -142,10 +133,6 @@
         top: 48%;
     }
 
-    .post {
-        flex-direction: column;
-    }
-
     .thumb {
         width: 100%;
         height: 16rem;
@@ -159,10 +146,15 @@
     .contents li {
         gap: 10px;
     }
+    .post {
+        flex-direction: column;
+        text-align: center;
+    }
 
     .post:nth-last-of-type(even) {
         flex-direction: column;
     }
+
 
     .gallery {
         height: 800px;
