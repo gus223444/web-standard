@@ -70,3 +70,6 @@ const swiper = new Swiper('.mySwiper', {
     },
     loop:true
 });
+AOS.init({
+    duration:1000,
+});
