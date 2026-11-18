@@ -64,12 +64,13 @@ const swiper = new Swiper('.mySwiper', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-    },    
+    },
     pagination: {
         el: '.swiper-pagination',
     },
-    loop:true
+    loop: true
 });
 AOS.init({
-    duration:1000,
+    duration: 1000,
+    
 });
